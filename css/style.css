@@ -1,22 +1,63 @@
 /* Aula inicial :D */
+*{
+  margin: 0; /* reset css - tirando margin e padding e toda página*/
+  padding: 0;
+}
+
 body {
-    background-image: url('https://image.freepik.com/vetores-gratis/fundo-geometrico-em-estilo-japones_23-2148474120.jpg');
-    background-size: auto 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
+    background-image: url('https://image.freepik.com/fotos-gratis/elegante-fundo-dourado-com-espaco-de-copia_23-2148495598.jpg');
+    background-size: 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
     font-family: Arial;
+    font-size: 12px;
     height: 100vh; /* garante que a altura do body seja sempre a mesma*/
+    position: relative;
+    width: 100vw;
   }  /* envolve toda a página */
+
+  /*se a tela tiver pelo menos 400px vai carregar esse estilo */
+  @media (min-width: 400px){
+      body{
+        font-size: 14px;
+        background-size: auto 100vh; 
+      }
+  }
+
+  /*breakpoint*/
+  @media (min-width: 600px){
+    body{
+      font-size: 18px;
+      background-size: auto 100vh; 
+    }
+  }
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   .menu{
-    background-color: #EEDD82;
+ /*se eu quisesse fixar em toda a página:  position: fixed*/
+    width: 100vw;
+    top: 40px; /*posição vertical*/
   }  /* classe menu que eu abri lá em nav, por isso colocar o ponto antes do nome */
   
   .menu ul {
-    display: flex; /* força a virar colunas*/
+  /*  display: flex;  - força a virar colunas*/
     justify-content: space-around;
+    margin-left: 10%;
   }
   
   .menu li{
     list-style: none;
+    margin-bottom: 40px;
+  }
+
+  .menu a{
+    display: block;
+    color: black;
+    font-size: 1em;
+    padding: 30px;
   }
   
   a {
@@ -30,12 +71,30 @@ body {
     text-decoration: underline;
   }
   
-  .site-subtitle,
   .site-title{
-    color: black;
+    color: #EE9A00;
+    font-size: 2em;
     text-align: center;
+    text-shadow: black;
+    transform: rotate(-61deg);
+    margin-left: -10%;
+    width: 700px;
+    padding-bottom: 100px;
   }
   
   .site-subtitle{
+    color: black;
+    font-size: 1em;
     font-style: italic;
+    text-align: center;
+    text-shadow: #EE9A00;
+    transform: rotate(-61deg);   
+    margin-right: -10%; 
+    padding-bottom: 150px;
+  }
+
+  .img-portfolio{
+    height: 50px;
+    width: 50px;
+    
   }

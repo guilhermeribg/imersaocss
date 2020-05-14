@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  <!-- comandos da página-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Ribeiro</title>
-    <link rel="stylesheet" href="./css/style.css"> <!--atrapalho pro autocompletar da criação da tag: escrevo a palavra link e aperto ctrl+espaço-->
+
+<head>
+  <!-- comandos da página-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--importante para ajustar automaticamente para cada de tipo de tela de mobile-->
+  <title>Guilherme Ribeiro</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!--atrapalho pro autocompletar da criação da tag: escrevo a palavra link e aperto ctrl+espaço-->
 </head>
+
 <body>
-    <header> <!-- tag de cabeçalho -->
-        <nav class="menu"> <!-- nav é de nagevação, também poderia usar o "id", mas ele indica um elemento único, o nav pega todos os elementos -->
-          <ul>
-            <li><a href="#">Sobre</a></li> <!-- tag a para botar link -->
-            
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
-        <h1 class="site-title">Guilherme Ribeiro Gonçalves</h1>
-        <h2 class="site-subtitle">jr. front-end developer</h2>
-      </header>
+  <header>
+    <!-- tag de cabeçalho -->
+    <div> <!--ajuda o css a fazer um layout melhor-->
+      <h1 class="site-title">Guilherme Ribeiro Gonçalves</h1>
+      <h2 class="site-subtitle">jr. front-end developer</h2>
+  </div>
+  <nav class="menu">
+    <!-- nav é de nagevação, também poderia usar o "id", mas ele indica um elemento único, o nav pega todos os elementos -->
+    <ul>
+      <li><a href="#">Sobre</a></li> <!-- tag a para botar link -->
+      <li><a href="#">Portfólio</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+  </header>
+  <section>
+    <h2>Portfólio</h2>
+    <div>
+      <figure>
+        <img class="img-portfolio" src="../IMERSÃO CSS/img/colab.jpeg" alt="DataScience">
+      </figure>
+      <p>Colabs - Curso de Data Science</p>
+   </div>
+    <figure>
+      <img class="img-portfolio" src="../IMERSÃO CSS/img/codepen.png" alt="CodePen">
+      <figcaption>CodePen - Curso de QuarentenaDev (Alura e CAELUM)</figcaption>
+    </figure>
+    <figure>
+      <img class="img-portfolio" src="./img/css.png" alt="Web design">
+      <figcaption>Imerssão CSS de Web design (Alura e CAELUM)</figcaption>
+    </figure>
+    <figure>
+      <img class="img-portfolio" src="./img/C.jpg" alt="Estudos pessoais de C e C++">
+      <figcaption>Estudos pessoais de C e C++</figcaption>
+    </figure>
+    <figure>
+      <img class="img-portfolio" src="./img/python.png" alt="Estudos pessoais de Python">
+      <figcaption>Estudos pessoais de Python</figcaption>
+    </figure>
+  </section>
+
 </body>
+
 </html>
