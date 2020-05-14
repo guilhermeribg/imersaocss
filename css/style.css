@@ -5,8 +5,8 @@
 }
 
 body {
-    background-image: url('https://image.freepik.com/fotos-gratis/elegante-fundo-dourado-com-espaco-de-copia_23-2148495598.jpg');
-    background-size: 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
+    background-image: url('../img/background.jpg');
+    background-size: auto 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
     font-family: Arial;
     font-size: 12px;
     height: 100vh; /* garante que a altura do body seja sempre a mesma*/
@@ -18,7 +18,7 @@ body {
   @media (min-width: 400px){
       body{
         font-size: 14px;
-        background-size: auto 100vh; 
+        background-size: 100vw 100vh; 
       }
   }
 
@@ -26,38 +26,48 @@ body {
   @media (min-width: 600px){
     body{
       font-size: 18px;
-      background-size: auto 100vh; 
+      background-size: 100vw 100vh; 
     }
   }
+
+  @media (min-width: 1200px){
+    body{
+      font-size: 18px;
+      background-size: 100vw 100vh; 
+    }
+  }
+
   header{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-content: space-around;
   }
   
   .menu{
- /*se eu quisesse fixar em toda a página:  position: fixed*/
-    width: 100vw;
-    top: 40px; /*posição vertical*/
+    width: 8vw;
+    padding-right: 40px;
+    padding-top: 10px;
+    background-color: rgba(230, 163, 157, 0.24);
+    border-radius: 10%;
   }  /* classe menu que eu abri lá em nav, por isso colocar o ponto antes do nome */
   
   .menu ul {
-  /*  display: flex;  - força a virar colunas*/
-    justify-content: space-around;
-    margin-left: 10%;
+    /*display: flex;*/  
+    text-align: right;
   }
-  
+
   .menu li{
     list-style: none;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .menu a{
     display: block;
     color: black;
     font-size: 1em;
-    padding: 30px;
+    font-family: 'Audiowide', cursive;
   }
   
   a {
@@ -69,32 +79,78 @@ body {
   a:hover {
     /*trata-se de uma pseudoclasse, não preciso criá-la no html, o css ja entende que ela existe, o hover é um atributo que faz aparecer algo quando passa o mouse em cima*/
     text-decoration: underline;
+    color: #B22222;
   }
   
   .site-title{
-    color: #EE9A00;
+    color: #B22222;
     font-size: 2em;
-    text-align: center;
+    font-family: 'Audiowide', cursive;
     text-shadow: black;
-    transform: rotate(-61deg);
-    margin-left: -10%;
-    width: 700px;
-    padding-bottom: 100px;
   }
   
   .site-subtitle{
     color: black;
     font-size: 1em;
-    font-style: italic;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     text-shadow: #EE9A00;
-    transform: rotate(-61deg);   
-    margin-right: -10%; 
-    padding-bottom: 150px;
+  }
+
+  .portfolio {
+    padding: 2em;
+    height: 87vh;
+
+  }
+  .portfolio h2{
+    font-family: 'Audiowide', cursive;
+    color: #B22222;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1em;
+  }
+
+  @media (min-width: 534px) {
+    .grid{
+    grid-template-columns: 180px 180px; /*faz duas colunas de 240px*/
+    justify-content: space-around;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .grid{
+    grid-template-columns: repeat(3,180px); /*faz três colunas de 240px*/
+    justify-content: space-around;
+    height: calc(100vh - 1em - 4em - 4em)
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  figure:hover{
+    text-decoration: underline;
+    color: #B22222;
+    background-color: rgba(211, 211, 211, 0.356);
   }
 
   .img-portfolio{
-    height: 50px;
-    width: 50px;
-    
+    height: 150px;
+    width: 210px; 
+    font-family: 'Roboto', sans-serif;  
+    object-fit: cover;
+    object-position: center;
+    border-radius: 40%;
+  }
+
+  @media (min-width: 1200px){
+    .img-portfolio{
+      height: 50%;
+      width: 80%; /*100% da media query definida anteriormente*/   
+    }
   }
