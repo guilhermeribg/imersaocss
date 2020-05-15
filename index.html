@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Permanent+Marker&family=Roboto&display=swap"
     rel="stylesheet">
   <!--atalho pro autocompletar da criação da tag: escrevo a palavra link e aperto ctrl+espaço-->
+  <script src="https://kit.fontawesome.com/6ba1bf88a5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,12 +26,12 @@
       <!-- nav é de nagevação, também poderia usar o "id", mas ele indica um elemento único, o nav pega todos os elementos -->
       <ul>
         <li><a href="#">Sobre</a></li> <!-- tag a para botar link -->
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#portfolio">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <h2>Projetos pessoais</h2>
     <div class="grid">
       <figure>
@@ -62,6 +63,23 @@
         <figcaption>Estudos pessoais de Python</figcaption>
         </a>
       </figure>
+    </div>
+  </section>
+  <section class="contato" id="contato">
+    <h2>Contato</h2>
+    <div class="icones">
+      <a target="_blank" href="https://github.com/guilhermeribg">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" href="https://www.facebook.com/guilherme.ribg/">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/guilherme-ribg/">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:guilherme.ribg@gmail.com">
+        <i class="far fa-envelope"></i>
+      </a>
     </div>
   </section>
 
