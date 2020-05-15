@@ -100,11 +100,45 @@ body {
     text-shadow: #EE9A00;
   }
 
-  .portfolio {
+  .contato, .portfolio {
     padding: 2em;
-    height: 87vh;
+    min-height: 100vh;
+    
 
   }
+
+  .contato h2{
+    font-family: 'Audiowide', cursive;
+    color: #B22222;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  .contato a{
+    font-size: 8em;
+    font-family: 'Roboto', sans-serif;  
+    object-fit: cover;
+    object-position: center;
+    border-radius: 40%;
+    text-decoration: none;
+    justify-content: space-around;  
+  }
+
+  .contato a:active,
+  .contato a:hover{
+    color: #B22222;
+    transition: 0.7s;
+    border-radius: 10%;
+    text-shadow: 0px 20px 5px slategray;
+  }
+
+    
+  @media (min-width: 219px) {
+    .icones{
+    grid-template-columns: 180px 180px; /*faz duas colunas de 240px*/
+    justify-content: space-around;
+    }
+
   .portfolio h2{
     font-family: 'Audiowide', cursive;
     color: #B22222;
@@ -136,6 +170,7 @@ body {
     text-align: center;
   }
 
+  figure:active,
   figure:hover{
     text-decoration: underline;
     color: #B22222;
@@ -155,7 +190,7 @@ body {
   }
 
   @media (min-width: 1200px){
-    .img-portfolio{
+    .img-portfolio, .contato{
       height: 50%;
       width: 80%; /*100% da media query definida anteriormente*/   
     }
