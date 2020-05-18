@@ -16,6 +16,7 @@
 
 <body>
   <header>
+    
     <!-- tag de cabeçalho -->
     <div>
       <!--ajuda o css a fazer um layout melhor-->
@@ -25,48 +26,74 @@
     <nav class="menu">
       <!-- nav é de nagevação, também poderia usar o "id", mas ele indica um elemento único, o nav pega todos os elementos -->
       <ul>
-        <li><a href="#">Sobre</a></li> <!-- tag a para botar link -->
+        <li><a href="#sobre">Sobre</a></li> <!-- tag a para botar link -->
         <li><a href="#portfolio">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
+  <section class="sobre" id="sobre">
+    <h2>Sobre</h2><br>
+    <img class="fotoPerfil" src="img/perfil.jpeg">
+
+    <p>
+      Biólogo que começou a se aventurar na área de T.I em 2019 e acabou se apaixonando por códigos.<br>
+      <br>
+
+      Formou-se em Ciências Biológicas em 2013 e nesse tempo trabalhou como professor de Ciências e Biologia nos diversos níveis educacionais (ensinos fundamental e médio, cursinho e cursos técnicos).
+      Paralelamente trabalhou como produtor audiovisual e de eventos. <br>
+
+      Em 2020 deu início ao curso de <a href="http://www.fagen.ufu.br/GI" target="_blank">Gestão da Informação</a> na Universidade Federal de Uberlândia. <br><br>
+
+      Desde 2019 vem realizando estudos por conta própria através de cursos EaD e em sites como <a href="https://www.udemy.com/user/guilherme-ribeiro-goncalves/" target="_blank">Udemy</a>, <a href="https://pt.coursera.org/learn/ciencia-computacao-python-conceitos" target="_blank">Coursera</a> e <a href="https://www.alura.com.br/" target="_blank">Alura (#QuarentenaDev, #QuarentenaDados e #ImersãoCSS)</a>.
+      <br><br>
+      Procura se aprimorar cada vez mais, principalmente na área de front-end, tendo este site como produto do curso ImersãoCSS.
+      <br><br>
+      <div style='text-align:center'>
+      <a class="cv" href="https://drive.google.com/open?id=1142q4aaHKG4eEfdbal0DTQ4ZA03cFOqS" target="_blank" text-align=center>Clique aqui para acessar o CV atualizado</a></div> 
+    </p>
+    <a id="subirTopo" href="#top">
+      ^ <br> Subir ao topo
+    </a>
+  </section>
   <section class="portfolio" id="portfolio">
     <h2>Projetos pessoais</h2>
     <div class="grid">
       <figure>
         <a href="https://github.com/guilhermeribg/quarentenadados" target="_blank">
-        <img class="img-portfolio" src="./img/colab.jpeg" alt="DataScience">
-       </a><figcaption>Colabs - Curso de Data Science</figcaption>
+          <img class="img-portfolio" src="./img/colab.jpeg" alt="DataScience">
+        </a>
+        <figcaption>Colabs - Curso de Data Science</figcaption>
       </figure>
       <figure>
         <a href="https://codepen.io/guilhermeribg" target="_blank">
-        <img class="img-portfolio" src="./img/codepen.png" alt="CodePen">
-        <figcaption>CodePen - Curso de QuarentenaDev (Alura e CAELUM)</figcaption>
-        </a>  
+          <img class="img-portfolio" src="./img/codepen.png" alt="CodePen">
+          <figcaption>CodePen - Curso de QuarentenaDev (Alura e CAELUM)</figcaption>
+        </a>
       </figure>
       <figure>
         <a href="https://github.com/guilhermeribg/imersaocss" target="_blank">
-        <img class="img-portfolio" src="./img/css.png" alt="Web design">
-        <figcaption>Imerssão CSS de Web design (Alura e CAELUM)</figcaption>
+          <img class="img-portfolio" src="./img/css.png" alt="Web design">
+          <figcaption>Imerssão CSS de Web design (Alura e CAELUM)</figcaption>
         </a>
       </figure>
       <figure>
         <a href="https://github.com/guilhermeribg/c_c-_exercisesuri" target="_blank">
-        <img class="img-portfolio" src="./img/C.jpg" alt="Estudos pessoais de C e C++">
-        <figcaption>Estudos pessoais de C e C++</figcaption>
+          <img class="img-portfolio" src="./img/C.jpg" alt="Estudos pessoais de C e C++">
+          <figcaption>Estudos pessoais de C e C++</figcaption>
         </a>
       </figure>
       <figure>
         <a href="https://github.com/guilhermeribg/pythonexercises" target="_blank">
-        <img class="img-portfolio" src="./img/python.png" alt="Estudos pessoais de Python">
-        <figcaption>Estudos pessoais de Python</figcaption>
+          <img class="img-portfolio" src="./img/python.png" alt="Estudos pessoais de Python">
+          <figcaption>Estudos pessoais de Python</figcaption>
         </a>
       </figure>
     </div>
   </section>
   <section class="contato" id="contato">
-    <h2>Contato</h2>
+    <div class="barraTop"></div>
+    <h2>Contato:</h2>
     <div class="icones">
       <a target="_blank" href="https://github.com/guilhermeribg">
         <i class="fab fa-github"></i>
@@ -80,7 +107,6 @@
       <a href="mailto:guilherme.ribg@gmail.com">
         <i class="far fa-envelope"></i>
       </a>
-    </div>
   </section>
 
 </body>

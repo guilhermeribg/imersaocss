@@ -7,7 +7,6 @@
 body {
     background-image: url('../img/background.jpg');
     background-size: auto 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
-    font-family: Arial;
     font-size: 10px;
     height: 100vh; /* garante que a altura do body seja sempre a mesma*/
     position: relative;
@@ -17,7 +16,7 @@ body {
   /*se a tela tiver pelo menos 400px vai carregar esse estilo */
   @media (min-width: 400px){
       body{
-        font-size: 10px;
+        font-size: 8px;
         background-size: 100vw 100vh; 
       }
   }
@@ -25,14 +24,14 @@ body {
   /*breakpoint*/
   @media (min-width: 600px){
     body{
-      font-size: 12px;
+      font-size: 10px;
       background-size: 100vw 100vh; 
     }
   }
 
   @media (min-width: 1200px){
     body{
-      font-size: 18px;
+      font-size: 16px;
       background-size: 100vw 100vh; 
     }
   }
@@ -49,8 +48,6 @@ body {
     width: 8vw;
     padding-right: 40px;
     padding-top: 10px;
-    background-color: rgba(230, 163, 157, 0.24);
-    border-radius: 10%;
   }  /* classe menu que eu abri lá em nav, por isso colocar o ponto antes do nome */
   
   .menu ul {
@@ -68,8 +65,22 @@ body {
     color: black;
     font-size: 1em;
     font-family: 'Audiowide', cursive;
+    animation: linear 0.8s animacaoMenu forwards;
+    background-color: rgba(230, 163, 157, 0.24);
+    border-radius: 10%;
   }
   
+  @keyframes animacaoMenu{
+    0%{
+      opacity:0;
+      transform: scale(0.2) translateY(50vh);
+    }
+    100%{
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
   a {
     color: black;
     text-decoration: none; /* tirando o underline */
@@ -90,6 +101,7 @@ body {
     font-family: 'Audiowide', cursive;
     text-shadow: black;
     height: 100px;
+    padding-left: 10px;
   }
   
   .site-subtitle{
@@ -98,30 +110,108 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     text-shadow: #EE9A00;
+    animation: linear 0.8s animacaoSubtitle forwards;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #B22222;
+
   }
 
-  .contato, .portfolio {
+  @keyframes animacaoSubtitle{
+    0%{
+      opacity:0;
+      transform: scale(0.2) translateX(25vh);
+    }
+    100%{
+      transform: scale(1) translateX(0);
+      opacity: 1;
+    }
+  }
+    
+  #subirTopo[href="#top"]{
+    text-decoration: none;
+    background: #B22222;
+    bottom: 20px;
+    right: 30px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: fixed;
+    border: 0;
+    font-family: sans-serif;
+    opacity: .8;
+    }
+    
+    #subirTopo:hover[href="#top"] {
+    opacity:1;
+    }
+
+  .sobre, .portfolio {
     padding: 2em;
     min-height: 100vh;
-    
-
   }
 
-  .contato h2{
+  .sobre {
+    display: block;
+  }
+  .sobre h2{
     font-family: 'Audiowide', cursive;
     color: #B22222;
     font-size: 2em;
     margin-bottom: 1em;
+    border-top: 3px solid #B22222;
+  }
+
+  .fotoPerfil{
+    height: 18em;
+    width: 15em;   
+    object-fit: cover;
+    object-position: center;
+    border-style:ridge;
+    border-color: #B22222;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;;
+  }
+
+  .sobre p {
+    font-size: 1.0em;
+  }
+
+  .sobre a{
+    color:#B22222;
+  }
+
+  .cv{
+    padding-bottom: 30px;
+    border-bottom: 3px solid #B22222;
+  }
+  .contato{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 10%;    
+  }
+  .contato h2{
+    border-top: 3px solid #B22222;
+    font-family: 'Audiowide', cursive;
+    color: #B22222;
+    font-size: 2em;
+    margin-bottom: 1em;
+    padding-right: 2em;
   }
 
   .contato a{
-    font-size: 8em;
+    font-size: 4em;
     font-family: 'Roboto', sans-serif;  
     object-fit: cover;
-    object-position: center;
     border-radius: 40%;
     text-decoration: none;
-    justify-content: space-around;  
+    justify-content: space-between; 
   }
 
   .contato a:active,
@@ -140,6 +230,7 @@ body {
     }
 
   .portfolio h2{
+    border-top: 3px solid #B22222;
     font-family: 'Audiowide', cursive;
     color: #B22222;
     font-size: 2em;
@@ -153,16 +244,16 @@ body {
 
   @media (min-width: 534px) {
     .grid{
-    grid-template-columns: 180px 180px; /*faz duas colunas de 240px*/
+    grid-template-columns: 150px 150px; /*faz duas colunas de 240px*/
     justify-content: space-around;
     }
   }
 
   @media (min-width: 880px) {
     .grid{
-    grid-template-columns: repeat(3,180px); /*faz três colunas de 240px*/
+    grid-template-columns: repeat(3,150px); /*faz três colunas de 240px*/
     justify-content: space-around;
-    height: calc(100vh - 1em - 4em - 4em)
+    height: calc(100vh - 9em)
     }
   }
 
@@ -181,16 +272,16 @@ body {
   }
 
   .img-portfolio{
-    height: 150px;
-    width: 210px; 
+    height: 80px;
+    width: 80px; 
     font-family: 'Roboto', sans-serif;  
     object-fit: cover;
     object-position: center;
     border-radius: 40%;
   }
-
+  }
   @media (min-width: 1200px){
-    .img-portfolio, .contato{
+    .img-portfolio, .contato, .sobre{
       height: 50%;
       width: 80%; /*100% da media query definida anteriormente*/   
     }
