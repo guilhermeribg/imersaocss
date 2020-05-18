@@ -7,7 +7,7 @@
 body {
     background-image: url('../img/background.jpg');
     background-size: auto 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
-    font-size: 10px;
+    font-size: 18px;
     height: 100vh; /* garante que a altura do body seja sempre a mesma*/
     position: relative;
     width: 100vw;
