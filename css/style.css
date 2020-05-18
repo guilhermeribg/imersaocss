@@ -283,6 +283,7 @@ body {
   @media (min-width: 1200px){
     .img-portfolio, .contato, .sobre{
       height: 50%;
-      width: 80%; /*100% da media query definida anteriormente*/   
+      width: 80%; /*100% da media query definida anteriormente*/
+      font-size: 1em;
     }
   }
