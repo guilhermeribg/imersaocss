@@ -7,7 +7,7 @@
 body {
     background-image: url('../img/background.jpg');
     background-size: auto 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
-    height: 100vh; /* garante que a altura do body seja sempre a mesma*/
+    height: auto 100vh; /* garante que a altura do body seja sempre a mesma*/
     position: relative;
     width: 100vw;
   }  /* envolve toda a página */
@@ -36,7 +36,7 @@ body {
   }
 
   header{
-    height: 100vh;
+    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,8 +45,7 @@ body {
 
     
   .menu{
-    width: 8vw;
-    padding-right: 40px;
+    width: auto;
     padding-top: 10px;
   }  /* classe menu que eu abri lá em nav, por isso colocar o ponto antes do nome */
   
@@ -138,6 +137,7 @@ body {
     height: 32px;
     padding-bottom: 0px;
     margin-bottom: 20px;
+    text-shadow: 0px 5px 5px slategray;
 
   }
   @media (min-width: 137px){
@@ -192,10 +192,14 @@ body {
     opacity:1;
     }
 
-  .sobre, .portfolio {
+  .sobre, .portfolio{
     padding: 2em;
     min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  
 
   .sobre {
     display: block;
@@ -217,11 +221,12 @@ body {
     border-color: #B22222;
     float: left;
     margin-right: 15px;
-    margin-bottom: 15px;;
+    margin-bottom: 15px;
   }
 
   .sobre p {
     font-size: 1.0em;
+    margin-bottom: 100px;
   }
 
   .sobre a{
@@ -231,14 +236,20 @@ body {
   .cv{
     padding-bottom: 30px;
     border-bottom: 3px solid #B22222;
+    text-shadow: 0px 5px 5px slategray;
   }
   .contato{
     display: flex;
     height: 10vh;
     align-items: center;
     flex-direction: column;
-    padding-left: 10%;    
+    padding-left: 10%; 
+    margin-top: 80px;  
+    padding-right: 10%; 
+    margin-left: auto;
+    margin-right: auto;
   }
+  
   .contato h2{
     border-top: 3px solid #B22222;
     font-family: 'Audiowide', cursive;
@@ -263,6 +274,12 @@ body {
     transition: 0.7s;
     border-radius: 10%;
     text-shadow: 0px 20px 5px slategray;
+  }
+
+  .contato p{
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 5px 5px slategray;
+    padding-top: 10px;
   }
 
     
@@ -302,6 +319,7 @@ body {
 
   .portfolio figure {
     text-align: center;
+    
   }
 
   figure:active,
@@ -321,6 +339,8 @@ body {
     object-fit: cover;
     object-position: center;
     border-radius: 40%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+
   }
   }
   @media (min-width: 1200px){
@@ -330,3 +350,5 @@ body {
       font-size: 1em;  
     }
   }
+
+  
