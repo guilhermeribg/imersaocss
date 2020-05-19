@@ -7,7 +7,6 @@
 body {
     background-image: url('../img/background.jpg');
     background-size: auto 100vh; /* largura automatica e altura 100% do tamanho total da tela, o auto mantém a proporção */
-    font-size: 18px;
     height: 100vh; /* garante que a altura do body seja sempre a mesma*/
     position: relative;
     width: 100vw;
@@ -16,7 +15,7 @@ body {
   /*se a tela tiver pelo menos 400px vai carregar esse estilo */
   @media (min-width: 400px){
       body{
-        font-size: 8px;
+
         background-size: 100vw 100vh; 
       }
   }
@@ -24,14 +23,14 @@ body {
   /*breakpoint*/
   @media (min-width: 600px){
     body{
-      font-size: 10px;
+
       background-size: 100vw 100vh; 
     }
   }
 
   @media (min-width: 1200px){
     body{
-      font-size: 16px;
+
       background-size: 100vw 100vh; 
     }
   }
@@ -52,7 +51,7 @@ body {
   
   .menu ul {
     /*display: flex;*/  
-    text-align: right;
+    text-align: center;
   }
 
   .menu li{
@@ -102,7 +101,23 @@ body {
     text-shadow: black;
     height: 100px;
     padding-left: 10px;
+    height: 141px;
+    width: 245px;
   }
+
+  @media (min-width: 137px){
+    .site-title{
+      font-size: 1.5em;
+    }
+  }
+
+  @media (min-width: 400px){
+    .site-title{
+      font-size: 2em;
+    }
+  }
+
+
   
   .site-subtitle{
     color: black;
@@ -113,8 +128,23 @@ body {
     animation: linear 0.8s animacaoSubtitle forwards;
     padding-bottom: 10px;
     border-bottom: 3px solid #B22222;
+    width: 219px;
+    height: 32px;
+    padding-bottom: 0px;
 
   }
+  @media (min-width: 137px){
+    .site-subtitle{
+      font-size: 0.5em;
+    }
+  }
+
+  @media (min-width: 400px){
+    .site-subtitle{
+      font-size: 1em;
+    }
+  }
+
 
   @keyframes animacaoSubtitle{
     0%{
@@ -283,7 +313,7 @@ body {
   @media (min-width: 1200px){
     .img-portfolio, .contato, .sobre{
       height: 50%;
-      width: 80%; /*100% da media query definida anteriormente*/
-      font-size: 1em;
+      width: 80%; /*100% da media query definida anteriormente*/ 
+      font-size: 1em;  
     }
   }
