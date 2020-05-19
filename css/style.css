@@ -40,9 +40,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
   }
-  
+
+    
   .menu{
     width: 8vw;
     padding-right: 40px;
@@ -99,10 +100,9 @@ body {
     font-size: 2em;
     font-family: 'Audiowide', cursive;
     text-shadow: black;
-    height: 100px;
     padding-left: 10px;
     height: 141px;
-    width: 245px;
+    width: 4em;
   }
 
   @media (min-width: 137px){
@@ -117,6 +117,12 @@ body {
     }
   }
 
+  @media (min-width:1000px){ 
+    .site-title{
+    width: auto;
+  }
+}
+ 
 
   
   .site-subtitle{
@@ -131,6 +137,7 @@ body {
     width: 219px;
     height: 32px;
     padding-bottom: 0px;
+    margin-bottom: 20px;
 
   }
   @media (min-width: 137px){
@@ -144,6 +151,12 @@ body {
       font-size: 1em;
     }
   }
+
+  @media (min-width:1000px){ 
+    .site-subtitle{
+    width: auto;
+  }
+}
 
 
   @keyframes animacaoSubtitle{
